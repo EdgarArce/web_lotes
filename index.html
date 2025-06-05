@@ -3,10 +3,113 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Venta de Terrenos</title>
+  <title>Tierras del Paraguay</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+  <!-- Tipografías profesionales desde Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Raleway:wght@400;600&display=swap" rel="stylesheet">
 </head>
+
 <body>
-  <h1>Bienvenido a Venta de Terrenos</h1>
-  <p>Esta es tu primera página web publicada con GitHub Pages.</p>
+  <header class="main-header">
+    <div class="overlay"></div>
+    <div class="header-content">
+      <h1>Tierras del Paraguay</h1>
+      <p class="slogan">"Confianza, ubicación y proyección: todo en un solo lugar"</p>
+    </div>
+  </header>
+
+  <div class="swiper-container">
+    <div class="swiper-wrapper">
+
+      <!-- Tarjetas de terrenos -->
+      <div class="swiper-slide">
+        <img src="img/imgindex/img1.jpeg" alt="Terreno en Areguá (Estanzuela)" />
+        <div class="card-content">
+          <h3>Terreno en Areguá (Estanzuela)</h3>
+          <p>Ubicado en una zona privilegiada. 28 hectáreas.</p>
+          <a href="terr_areg.html">Ver más</a>
+        </div>
+      </div>
+
+      <div class="swiper-slide">
+        <img src="img/img-areg-valle1/img1.jpeg" alt="Terreno en Areguá (Valle Pucú 1)" />
+        <div class="card-content">
+          <h3>Terreno en Areguá (Valle Pucú 1)</h3>
+          <p>Zona poblada con 2.5 hectáreas.</p>
+          <a href="terr_areg_valle1.html">Ver más</a>
+        </div>
+      </div>
+
+      <div class="swiper-slide">
+        <img src="img/img-areg-valle2/img1.jpeg" alt="Terreno en Areguá (Valle Pucú 2)" />
+        <div class="card-content">
+          <h3>Terreno en Areguá (Valle Pucú 2)</h3>
+          <p>Oportunidad de inversión. 3 hectáreas.</p>
+          <a href="terr_areg_valle2.html">Ver más</a>
+        </div>
+      </div>
+
+      <div class="swiper-slide">
+        <img src="img/img-areg-centro/img1.jpeg" alt="Terreno en Areguá (Centro 1)" />
+        <div class="card-content">
+          <h3>Terreno en Areguá (Centro 1)</h3>
+          <p>Ubicado en el centro de Areguá.</p>
+          <a href="terr_areg_centro.html">Ver más</a>
+        </div>
+      </div>
+
+      <div class="swiper-slide">
+        <img src="img/img-areg-centro2/img1.jpeg" alt="Terreno en Areguá (Centro 2)" />
+        <div class="card-content">
+          <h3>Terreno en Areguá (Centro 2)</h3>
+          <p>Cerca del centro urbano.</p>
+          <a href="terr_areg_centro2.html">Ver más</a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Navegación y paginación -->
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-pagination"></div>
+  </div>
+
+  <footer>
+    © 2025 Tierras del Paraguay - Todos los derechos reservados - Areguá, Paraguay.
+  </footer>
+
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script>
+    const swiper = new Swiper('.swiper-container', {
+      slidesPerView: 1,
+      spaceBetween: 20,
+      loop: true,
+      autoplay: {
+        delay: 12000,
+        disableOnInteraction: false,
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      breakpoints: {
+        640: { slidesPerView: 1 },
+        768: { slidesPerView: 2 },
+        1024: { slidesPerView: 3 }
+      }
+    });
+  </script>
+
+  <!-- Botón flotante de WhatsApp -->
+  <a href="https://wa.me/595992956681?text=Hola,%20estoy%20interesado%20en%20los%20terrenos%20que%20ofrecen." 
+     class="whatsapp-button" target="_blank" aria-label="Contactar por WhatsApp">
+    <img src="https://img.icons8.com/color/48/000000/whatsapp--v1.png" alt="WhatsApp" />
+  </a>
 </body>
 </html>

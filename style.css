@@ -1,0 +1,194 @@
+/* RESET BASICO */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  font-family: 'Raleway', sans-serif;
+  background-color: #f5f1e9; /* color tierra suave */
+  color: #3a3a3a;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* HEADER PROFESIONAL */
+header {
+  background-image: url('https://www.transparenttextures.com/patterns/sandpaper.png');
+  background-color: #e0d9c4; /* color de base arenoso */
+  background-repeat: repeat;
+  color: #2c2c2c;
+  padding: 30px 10px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  font-family: 'Raleway', sans-serif;
+}
+
+header h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 3rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #3c3c3c;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  letter-spacing: 1px;
+}
+
+header p {
+  font-style: italic;
+  font-size: 1.2rem;
+  color: #5a5a5a;
+  text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.6);
+}
+
+/* CONTENEDOR PRINCIPAL */
+.swiper-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 30px auto;
+  padding-bottom: 40px;
+}
+
+/* SLIDER */
+.swiper-slide {
+  background-color: #f0eee8;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.swiper-slide img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 15px;
+  background-color: #e8e6dc;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card-content h3 {
+  font-size: 1.3rem;
+  color: #666649;
+  margin-bottom: 8px;
+}
+
+.card-content p {
+  font-size: 1rem;
+  color: #666649;
+  margin-bottom: 12px;
+  flex-grow: 1;
+}
+
+.card-content a {
+  text-decoration: none;
+  color: #fff;
+  background-color: #6b8e23;
+  padding: 8px 15px;
+  border-radius: 6px;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.card-content a:hover {
+  background-color: #4a6914;
+}
+
+/* BOTONES DE NAVEGACION SWIPER */
+.swiper-button-next,
+.swiper-button-prev {
+  color: #556b2f;
+  filter: drop-shadow(1px 1px 1px rgba(0,0,0,0.2));
+}
+
+.swiper-pagination-bullet {
+  background: #8f9779;
+  opacity: 0.7;
+}
+
+.swiper-pagination-bullet-active {
+  background: #556b2f;
+  opacity: 1;
+}
+
+/* FOOTER */
+footer {
+  background-color: #556b2f;
+  color: #d7d3c1;
+  text-align: center;
+  padding: 18px 10px;
+  font-size: 1rem;
+  box-shadow: 0 -4px 8px rgba(85, 107, 47, 0.4);
+  margin-top: auto;
+}
+
+/* BOTÓN WHATSAPP */
+.whatsapp-button {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  z-index: 2000;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  background-color: #25d366;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  transition: background-color 0.3s ease;
+}
+
+.whatsapp-button:hover {
+  background-color: #1ebe5d;
+}
+
+.whatsapp-button img {
+  width: 32px;
+  height: 32px;
+}
+
+/* --- Estilos para zoom con scroll --- */
+.galeria {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1em;
+  max-width: 900px;
+  margin: auto;
+}
+
+.img-zoom-container {
+  overflow: hidden;
+  border-radius: 8px;
+  position: relative;
+  cursor: grab;
+}
+
+.zoomable {
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease;
+  user-select: none;
+  pointer-events: auto;
+  transform-origin: center center;
+}
+
+.zoomable.zoomed {
+  cursor: grabbing;
+}
